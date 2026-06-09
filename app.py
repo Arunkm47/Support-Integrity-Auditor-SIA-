@@ -61,3 +61,15 @@ if uploaded_file is not None:
     st.write(df.head())
 
     st.success("CSV Uploaded Successfully")
+
+st.header("Priority Mismatch Dashboard")
+
+import pandas as pd
+
+df_dash = pd.read_csv("pseudo_labeled_dataset.csv")
+
+st.subheader("Mismatch Distribution")
+st.bar_chart(df_dash["mismatch"].value_counts())
+
+st.subheader("Mismatch Type Distribution")
+st.bar_chart(df_dash["mismatch_type"].value_counts())
