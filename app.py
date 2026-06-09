@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 st.title("Support Integrity Auditor (SIA)")
 
@@ -37,9 +38,26 @@ satisfaction = st.slider(
 )
 
 if st.button("Analyze Ticket"):
-
     st.success("Analysis Completed")
 
-    st.write("Prediction: Demo Output")
+    st.subheader("Prediction")
+    st.write("Mismatch")
 
-    st.write("Confidence: 95%")
+    st.subheader("Evidence Dossier")
+
+    st.write("Category Score: 3")
+    st.write("Satisfaction Risk: 4")
+    st.write("Assigned Priority: Low")
+    st.write("Estimated Severity: High")
+
+uploaded_file = st.file_uploader(
+    "Upload CSV",
+    type=["csv"]
+)
+
+if uploaded_file is not None:
+    df = pd.read_csv(uploaded_file)
+
+    st.write(df.head())
+
+    st.success("CSV Uploaded Successfully")
