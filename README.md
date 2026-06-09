@@ -145,6 +145,11 @@ The trained model will be saved in:
 ```text
 sia_model/
 ```
+## Trained Model
+
+The trained DistilBERT model is available at:
+
+https://drive.google.com/drive/folders/1_epY4js5yXygUMxrcoX5tuPZIvVje0St?usp=sharing
 
 ---
 
