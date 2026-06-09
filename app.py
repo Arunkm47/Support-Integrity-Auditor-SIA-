@@ -73,3 +73,9 @@ st.bar_chart(df_dash["mismatch"].value_counts())
 
 st.subheader("Mismatch Type Distribution")
 st.bar_chart(df_dash["mismatch_type"].value_counts())
+
+st.subheader("Issue Category Distribution")
+st.bar_chart(df_dash["Issue_Category"].value_counts())
+
+st.subheader("Priority Level Distribution")
+st.bar_chart(df_dash["Priority_Level"].value_counts())
